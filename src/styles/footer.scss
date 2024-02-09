@@ -1,0 +1,15 @@
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $brand;
+
+    h2 {
+        padding: 0;
+    }
+}

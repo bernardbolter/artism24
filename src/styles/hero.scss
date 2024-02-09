@@ -1,0 +1,238 @@
+.hero-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.phone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 420;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        transform-origin: center;
+    }
+}
+
+.phone-mask {
+  width: 100%;
+  height: 100vh;
+  background: $light;
+  position: absolute;
+  z-index: 101;
+}
+
+.phone-corner {
+  position: absolute;
+  z-index: 101;
+  width: 40px;
+  height: 40px;
+  box-sizing:border-box;
+}
+
+.top-left {
+  border-left: 10px solid $light;
+  border-top: 10px solid $light;
+  background: radial-gradient(farthest-side at bottom right,transparent 98%,$light ) top left/30px 30px no-repeat;
+}
+
+.top-right {
+  border-right: 10px solid $light;
+  border-top: 10px solid $light;
+  background: radial-gradient(farthest-side at bottom left,transparent 98%,$light ) top left/30px 30px no-repeat;
+}
+
+.bottom-left {
+  border-left: 10px solid $light;
+  border-bottom: 10px solid $light;
+  background: radial-gradient(farthest-side at top right,transparent 98%,$light ) top left/30px 30px no-repeat;
+
+}
+
+.bottom-right {
+  border-right: 10px solid $light;
+  border-bottom: 10px solid $light;
+  background: radial-gradient(farthest-side at top left,transparent 98%,$light ) top left/30px 30px no-repeat;
+}
+
+.artism-tagline {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 101;
+
+    p {
+      color: $dark;
+      margin-top: 270px;
+      opacity: .6;
+
+      @media screen and (min-width: $artismBreak) {
+        margin-top: 170px;
+      }
+  
+      @media screen and (min-width: $tabletBreak) {
+        margin-top: 180px;
+      }
+  
+      @media screen and (min-width: $desktopBreak) {
+        margin-top: 200px;
+      }
+  
+      @media screen and (min-width: $jumboBreak) {
+        margin-top: 240px;
+      }
+    }
+}
+
+.plain {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 101;
+    color: $dark;
+}
+
+// .mask {
+//     mask-image: url('/phone-mask.svg'); 
+//     mask-repeat: no-repeat;
+//     mask-position: var(--mouse-x) var(--mouse-y);
+
+//     @media screen and (min-width: 769px) {
+//       mask-image: url('/phone-mask_xl.svg');
+//     }
+// }
+
+.colorful {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    // animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.textStyle {
+  text-shadow: 0 1px 0 #dba1a1, 0 2px 0 #d89999, 0 3px 0 #d59292, 0 4px 0 #d28a8a, 0 5px 0 #cf8383, 0 6px 0 #cd7c7c, 0 7px 0 #ca7474, 0 8px 0 #c76d6d, 0 0 5px rgba(230, 139, 139, 0.05), 0 -4px 8px rgba(230, 139, 139, 0.2), 0 15px 15px rgba(230, 139, 139, 0.3), 0 21px 21px rgba(230, 139, 139, 0.3), 0 25px 25px rgba(230, 139, 139, 0.3);
+  
+  h1 {
+    color: #dba1a1 !important;
+  }
+} 
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 120px;
+    line-height: 120px;
+    color: inherit;
+
+    @media screen and (min-width: $artismBreak) {
+      font-size: 140px;
+      line-height: 140px;
+    }
+
+    @media screen and (min-width: $tabletBreak) {
+      font-size: 170px;
+      line-height: 170px;
+    }
+
+    @media screen and (min-width: $desktopBreak) {
+      font-size: 200px;
+      line-height: 200px;
+    }
+
+    @media screen and (min-width: $jumboBreak) {
+      font-size: 230px;
+      line-height: 230px;
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .art {
+    display: inline-block;
+  }
+
+  .ism {
+    display: block;
+
+    @media screen and (min-width: $artismBreak) {
+      display: inline-block;
+    }
+  }
+}
+
+.showPhoneButton {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 10%;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 105;
+
+    h4 {
+      font-weight: 600;
+      font-size: 24px;
+      opacity: .8;
+      position: relative;
+      z-index: 1001;
+      cursor: pointer;
+    }
+}

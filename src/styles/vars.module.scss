@@ -1,0 +1,33 @@
+$brand: #B0A272;
+$light: #fdfdfd;
+$dark: #1a0f06;
+$compliment: #474747;
+
+$backgroundOne: #F7F7F7;
+
+:export {
+    brand: $brand;
+    compliment: $compliment;
+}
+
+$artismBreak: 550px;
+$tabletBreak: 769px;
+$desktopBreak: 1001px;
+$jumboBreak: 1201px;
+
+
+$brandMuted: #60A460;
+$accent: #1a0f06;
+$accentMuted: #494541;
+$textLight: #f0ebeb;
+$textMedium: #474747;
+$textDark: #1a0f06;
+$background: #FFFEF5;
+$backgroundTransparent: rgba(255, 254, 245, .5);
+$backgroundMuted: #D7D6D0;
+$lightGrey: #ececec;
+
+$fm_light: #FDFDFD;
+$fm_mid: #F1ECE7;
+$fm_dark: #3D3D3D;
+$fm_grey: #999;

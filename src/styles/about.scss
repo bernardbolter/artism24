@@ -1,0 +1,47 @@
+.about-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $backgroundOne;
+    position: relative;
+}
+
+.about-top {
+    width: 100%;
+    height: 1px;
+    background: $brand;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about-bot-1 {
+    width: 100%;
+    height: 1px;
+    background: $brand;
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+}
+
+.about-bot-2 {
+    width: 100%;
+    height: 1px;
+    background: $brand;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+}
+
+.about-bot-3 {
+    width: 100%;
+    height: 1px;
+    background: $brand;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+}

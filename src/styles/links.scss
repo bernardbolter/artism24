@@ -1,0 +1,33 @@
+.links-container {
+    position: fixed;
+    z-index: 201;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+        width: 39px;
+        height: 39px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 7px;
+        padding: 0;
+        cursor: pointer;
+        opacity: .75;
+        transition: opacity .5s ease-in-out;
+
+        &:hover {
+            opacity: .9;
+            transition: opacity .5s ease-in-out;
+        }
+
+        svg {
+            width: 100%;
+            fill: $dark;
+        }
+    }
+}

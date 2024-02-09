@@ -1,0 +1,13 @@
+.logo-container {
+    position: fixed;
+    z-index: 201;
+    top: 10px;
+    left: 10px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+    }
+}
