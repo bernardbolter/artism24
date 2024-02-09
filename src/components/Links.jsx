@@ -13,18 +13,18 @@ const Links = () => {
 
     return (
         <div className="links-container">
-            <a href="">
+            <a href="https://www.instagram.com/art____ism">
                 <Instagram 
                     fill={art.showPhone ? vars.compliment :vars.brand }
                 />
             </a>
-            <a href="">
+            <a href="https://twitter.com/art____ism">
                 <Twitter
                     style={{ paddingLeft: '3px' }}
                     fill={art.showPhone ? vars.compliment :vars.brand }
                 />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/bernardbolter">
                 <Linkedin 
                     fill={art.showPhone ? vars.compliment :vars.brand }
                 />
