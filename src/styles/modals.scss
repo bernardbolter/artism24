@@ -1,0 +1,147 @@
+.modal-close {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    transition: opacity .5s ease-in-out;
+    opacity: .7;
+    cursor: pointer;
+
+    &:hover {
+        transition: opacity .5s ease-in-out;
+        opacity: .9;
+    }
+
+    svg {
+        width: 100%;
+        fill: $brand;
+    }
+}
+
+.datenschutz-container {
+    width: 100%;
+
+    a {
+        color: $dark;
+    }
+}
+
+.datenschutz-close {
+    width: 26px;
+    height: 26px;
+    transition: opacity .5s ease-in-out;
+    opacity: .7;
+    cursor: pointer;
+
+    &:hover {
+        transition: opacity .5s ease-in-out;
+        opacity: .9; 
+    }
+
+    svg {
+        width: 100%;
+        fill: $brand;
+    }
+}
+
+.daten-content {
+    width: 90%;
+    padding: 20% 5% 10%;
+    color: $brand;
+
+    @media screen and (min-width: 500px) {
+        width: 80%;
+        padding: 20% 10% 10%; 
+    }
+
+    @media screen and (min-width: 769px) {
+        width: 60%;
+        padding: 10% 20%; 
+    }
+
+    @media screen and (min-width: 1000px) {
+        width: 50%; 
+    }
+
+    @media screen and (min-width: 1201px) {
+        width: 40%; 
+    }
+}
+
+.impressum-container {
+    width: 270px;
+    text-align: right;
+    transform: translateX(-300px);
+    background: $compliment;
+    color: $brand;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    bottom: 33px;
+    right: 0;
+    position: absolute;
+    z-index: 401;
+}
+
+.impressum-content {
+    display: block;
+    position: relative;
+    z-index: 803;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .spacer {
+        margin-bottom: 10px;
+
+        @media only screen and (min-width: 769px) {
+            margin-bottom: 15px;
+        }
+
+        @media only screen and (min-width: 1000px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    h1 {
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 16px;
+        opacity: .8;
+        margin: 0;
+        padding: 0;
+    }
+
+    h5 {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+
+        opacity: .7;
+
+
+        span {
+            display: block;
+            font-size: 10px;
+            opacity: .7;
+        }
+    }
+
+    h4 {
+        font-size: 15px;
+        margin: 0;
+        padding: 10px 0;
+        opacity: .75;
+        font-weight: 500;
+    }
+}

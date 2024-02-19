@@ -1,10 +1,102 @@
 .faq-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: $backgroundOne;
+
+    h1 {
+        color: $brand;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+}
+
+.faq-accordians {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 5%;
+
+    @media screen and (min-width: $tabletBreak) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &::after {
+        content: "";
+        flex: auto;
+    }
+}
+
+
+.accordian-container {
+    overflow: hidden;
+    width: 100%;
+
+    @media screen and (min-width: $tabletBreak) {
+        width: 48%;
+    }
+}
+
+.accordian-headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $light;
+    border-bottom: 1px solid $lightCompliment;
+    cursor: pointer;
+
+    h2 {
+        margin: 0;
+        padding: 3px 0 0 10px;
+        color: $compliment;
+        width: calc(100% - 49px);
+    }
+}
+
+.faq-svg {
+    width: 24px;
+    height: 24px;
+    stroke: $compliment;
+    position: relative;
+}
+
+.minus-container {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    transform: rotate(90deg);
+    transition: transform .5s ease-in-out;
+}
+
+.minus-container-turned {
+    transform: rotate(0deg);
+    transition: transform .5s ease-in-out;
+}
+
+.accordian-text {
+    width: 100%;
+    transition: height .5s ease-in-out;
+    background: $formback;
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 10px 5%;
+        color: $lightCompliment;
+    }
+}
+
+.accordian-text-open {
+    transition: height .5s ease-in-out;
 }

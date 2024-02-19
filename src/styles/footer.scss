@@ -1,6 +1,8 @@
 .footer-container {
-    width: 100%;
+    width: 94%;
+    margin: 0 3% 14px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
@@ -11,5 +13,23 @@
 
     h2 {
         padding: 0;
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        color: $brand;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 0 14px;
+        padding: 0;
+        cursor: pointer;
     }
 }

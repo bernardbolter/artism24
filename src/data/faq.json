@@ -1,0 +1,38 @@
+[
+    {
+        "headline" : "What is Artism?",
+        "text" : "Art House brings brands to life through augmented reality. Our proprietary platform enables clients to visually narrate the stories behind their products and marketing materials. When audiences discover the hidden digital layers underlying our clients' brand, product & marketing assets, they form more meaningful, personal connections. Everything from ads to packaging labels to posters become windows to new content and stories."
+    },
+    {
+        "headline" : "What is augmented reality (AR)?",
+        "text" : "Augmented reality (AR) overlays the physical world with digital content, when viewed through a lens. Currently, the most popular lens to view AR is your phone's camera, and there are several exciting developments that will soon bring popular forms of AR glasses to the marketplace.  In short, AR enhances the physical world around you through visuals, sound, and other digital special effects."
+    },
+    {
+        "headline" : "How does Artism work?",
+        "text" : "Our technology enables smartphone cameras and motions sensors with augmented reality, without an app. When you view an image, object, or location, they come to life with uploaded content by placing an augmented reality digital layer over the physical layer. You can then swipe to view more layers (different content)."
+    },
+    {
+        "headline" : "What types of content does Art House support",
+        "text" : "Art House is built with versatility in mind. We have developed our technology to work with 2D & 3D animations, videos, 360 photos & 360 videos, audio, links, and more."
+    },
+    {
+        "headline" : "What types of real world items can Artism augment?",
+        "text" : "Art House can augment virtually any image or graphic. Here are some examples of use-cases: Billboards, signs, posters, postcards, photographs, stickers, business cards, brochures, one-pagers, books, magazines, murals, art, apparel..."
+    },
+    {
+        "headline" : "What types of smartphones are compatible with the Artism technology?",
+        "text" : "More than 300 smartphones are compatible, including Apple and Android devices. Please note: the tech requires Android 10, iOS 12, or later."
+    },
+    {
+        "headline" : "Will Artism work with my art?",
+        "text" : "Every artist has a story to tell, which consumers are craving to hear. Long gone are the days of purely transaction relationships with consumers, who now expect personal, meaningful, experiential brand interactions. Augment their reality and augment your brand's presence."
+    },
+    {
+        "headline" : "Does my audience have to download an app?",
+        "text" : "No. While we do have our Art House app for iOS and Android available for download, we also provide an app-less solution for select projects using the latest application development technology. In addition to these solutions, we also offer white-label applications and SDK options for your convenience."
+    },
+    {
+        "headline" : "What if I don't have content ready?",
+        "text" : "We have built the Art House Motion Design Studio for your convenience. Our professional creatives are industry experts and know how to take your AR idea and make it reality. We'll work with you to identify what assets you need and manage the creative process for a seamless experience."
+    }
+]

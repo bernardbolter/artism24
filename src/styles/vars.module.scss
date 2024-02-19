@@ -2,12 +2,16 @@ $brand: #B0A272;
 $light: #fdfdfd;
 $dark: #1a0f06;
 $compliment: #474747;
+$lightCompliment: #636467;
+$formback: rgba(255,255,255,.1);
+$error: #ed4337;
 
 $backgroundOne: #F7F7F7;
 
 :export {
     brand: $brand;
     compliment: $compliment;
+    error: $error;
 }
 
 $artismBreak: 550px;

@@ -12,7 +12,10 @@ const ArtProvider = ({ children }) => {
         phoneWidth: 0,
         phoneHeight: 0,
         phoneBotPad: 0,
-        navOpen: false
+        navOpen: false,
+        datenschutzOpen: false,
+        impressumOpen: false,
+        datenDisplay: 'none'
     })
     
     return (

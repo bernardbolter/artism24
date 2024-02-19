@@ -6,6 +6,7 @@ import About from '../components/About'
 import Showcase from '../components/Showcase'
 import FAQ from '../components/FAQ'
 import Contact from '../components/Contact'
+import Datenschutz from "../components/Datenschutz"
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Showcase />
             <FAQ />
             <Contact />
+            <Datenschutz />
         </section>
     )
 }
