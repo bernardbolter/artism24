@@ -3,12 +3,12 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    background: $backgroundOne;
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-image: url('data:image/webp;base64,UklGRnwCAABXRUJQVlA4THACAAAvQsAYAE8gJEj+Dyab/PD6/9f/z39iO+jK2jY1cvQxa/g/Hz1VcqZPS9mhaQ+UU/eizsFVkEsu6QKEoMNVv+7AF8yeThTR/wlQBtqcoW9fnjfTWFl9S/02aOgIBqlPJMDKQ+jo7hKAfb0GAbLnjZgbAkSXXIEZCP/4PMANSquYpuAMrDysGGBlfUNTxNF6VyX97i650i50Lj5yRTqyakN3D+xUx2hjcc5DRoHsulX7jdRvlXEUFmW+mp/qDf37tGa+fgoZzcQ1rkWg4MYB7HT864/34w2OcZS7y5PanNTHho1CVsWCzYGyUMaIyjyEtsXeb4aII/WJMOuAzG+1ny331U9aO7D/DmGv248iAFwvyK4b1+EynwBiMoDokmtDF+VhBQiyGMLyXK9B7vxW6dsPUp8g9Yb+Q4gu+bcl08D7FyZ7+QTIRAFDx7EptG3ogOYvKOqYDOz3ydy+CKdx0TnfP/+A2XjpNVHuqq0ylv17XAFYWaxGij4OSntWxaNkPgasxUWXvJc0rDyG9LbyuNIuMO78VhmaXhNtUyCrNvRXgKjMbyxwLwFE5yJk3P31x0JfAjKfKENdG3f+SV8+7eu1oaC9WsXAToe3z4UCGIMFdSjsrt+qWMEY/e5//z265CHYOOJ2dfwSwK7eADrIwW1ZKA3uqq3iMO2Hy3wCbdipWDHYTvWaNgHYVTGgDddyW+WBc20mTkyi85PS0+38TxAQewkQBwp2Oq47LCoPn2g1fQnomfpYDHD3Vb7SFif0g8sxBLerY6HnkEVWb/685KEyHtz550RnbgJjFv0NphMANmfoKIpOs7TvqE2DzRn6KxU=')
 }
 
 .about-elements {
@@ -16,14 +16,44 @@
     margin: 10px 2%;
     z-index: 101;
     position: relative;
+
+    @media screen and (min-width: $artismBreak) {
+        width: 90%;
+        margin: 10px 5%;
+    }
+
+    @media screen and (min-width: $desktopBreak) {
+        width: 80%;
+        margin: 10px 10%;
+        max-width: 1100px;
+        margin: 10px auto;
+    }
     
     h1 {
         color: $brand;
         font-size: 34px;
         width: 80%;
-        padding: 65px 20% 0 0;
+        padding: 30px 20% 0 0;
         margin: 0;
         font-weight: 900;
+
+        @media screen and (min-width: $artismBreak) {
+            font-size: 49px;
+            width: 80%;
+            padding: 0 20% 0 0;
+        }
+
+        @media screen and (min-width: $tabletBreak) {
+            font-size: 60px;
+            width: 75%;
+            padding: 0 25% 0 5%;
+        }
+
+        @media screen and (min-width: $desktopBreak) {
+            font-size: 65px;
+            width: 100%;
+            padding: 0;
+        }
     }
 
     h2 {
@@ -31,7 +61,19 @@
        font-size: 16px;
        margin: 0;
        padding: 10px 35% 0 0;
-       font-weight: 400; 
+       font-weight: 400;
+
+       @media screen and (min-width: $artismBreak) {
+        font-size: 18px;
+       }
+
+       @media screen and (min-width: $tabletBreak) {
+        font-size: 21px;
+       }
+
+       @media screen and (min-width: $desktopBreak) {
+        font-size: 28px;
+       }
     }
 
     h3 {
@@ -39,7 +81,19 @@
         font-size: 16px;
         margin: 0;
         padding: 10px 35% 20px 0;
-        font-weight: 400;  
+        font-weight: 400;
+
+        @media screen and (min-width: $artismBreak) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: $tabletBreak) {
+            font-size: 21px;
+        }
+
+        @media screen and (min-width: $desktopBreak) {
+            font-size: 28px;
+           }
     }
 
     h4 {
@@ -48,6 +102,18 @@
         padding: 0;
         font-size: 26px;
         font-weight: 700;
+
+        @media screen and (min-width: $artismBreak) {
+            font-size: 32px;
+        }
+
+        @media screen and (min-width: $tabletBreak) {
+            font-size: 42px;
+        }
+
+        @media screen and (min-width: $desktopBreak) {
+            font-size: 49px;
+        }
     }
 
     h5 {
@@ -56,6 +122,14 @@
         padding: 0 0 20px;
         font-size: 14px;
         font-weight: 500;
+
+        @media screen and (min-width: $artismBreak) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: $desktopBreak) {
+            font-size: 24px;
+        }
     }
 
     p {
@@ -65,6 +139,16 @@
         font-size: 16px;
         font-weight: 300;
         line-height: 20px;
+
+        @media screen and (min-width: $artismBreak) {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @media screen and (min-width: $desktopBreak) {
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
 }
 
@@ -74,6 +158,30 @@
     position: absolute;
     top: 210px;
     right: 0;
+
+    @media screen and (min-width: $artismBreak) {
+        width: 200px;
+        height: 200px;
+        top: 45%;
+    }
+
+    @media screen and (min-width: $tabletBreak) {
+        width: 250px;
+        height: 250px;
+        top: 40%;
+    }
+
+    @media screen and (min-width: $desktopBreak) {
+        width: 300px;
+        height: 300px;
+        top: 33%;
+    }
+
+    @media screen and (min-width: $jumboBreak) {
+        width: 350px;
+        height: 350px;
+        top: 27%;
+    }
 
     svg {
         width: 100%;

@@ -38,6 +38,30 @@
     position: relative;
 }
 
+.showcase-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.showcase-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.video-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: 2px solid $light;
+    opacity: .6;
+}
+
 .video-control {
     width: 36px;
     height: 36px;
@@ -64,32 +88,11 @@
 }
 
 .video-left {
-    position: absolute;
-    left: 20px;
-    bottom: 1%;
-
-    @media screen and (min-width: $artismBreak) {
-        bottom: 7%;
-    }
-
-    @media screen and (min-width: $tabletBreak) {
-        bottom: 45%;
-    }
+ display: block
 }
 
 .video-right {
-    position: absolute;
-    right: 20px;
-    bottom: 1%;
     transform: rotate(180deg);
-
-    @media screen and (min-width: $artismBreak) {
-        bottom: 7%;
-    }
-
-    @media screen and (min-width: $tabletBreak) {
-        bottom: 45%;
-    }
 }
 
 .video-info {
@@ -102,12 +105,8 @@
 
     @media screen and (min-width: $tabletBreak) {
         width: 80%;
-        margin: 0 0 0 7%;
-    }
-
-    h2 {
-        background: $compliment;
-        color: $brand;
+        margin: 0 auto;
+        max-width: 850px;
     }
 
     video {
@@ -117,17 +116,60 @@
         width: 100%;
         height: auto;
     }
+}
 
-    p {
-        color: $compliment;
-        margin: 20px 10% 40px;
-        width: 80%;
-        line-height: 21px;
-        font-size: 14px;
+.video-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 30px;
+
+    @media screen and (min-width: $tabletBreak) {
+        flex-direction: row;
+    }
+
+    h2 {
+        color: $light;
+        font-weight: 500;
+        margin: 10px 30% 0;
+        width: 86%;
+        margin: 5px 2%;
+        font-size: 21px;
+        background: rgba(0,0,0,.2);
+        padding: 7px 14px;
+        border-radius: 3px;
+
+        @media screen and (min-width: $artismBreak) {
+            width: 70%;
+            line-height: 30px;
+        }
 
         @media screen and (min-width: $tabletBreak) {
-            margin: 20px 50% 20px 5%;
-            width: 45%;
+            margin: 10px 5% 20px 5%;
+            width: 40%;
+            font-size: 24px;
+            line-height: 32px;
+        } 
+    }
+
+    h4 {
+        color: $compliment;
+        width: 90%;
+        margin: 12px 0 0 10%;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+
+        @media screen and (min-width: $tabletBreak) {
+            width: 70%;
+            margin: 12px 0 0 30%; 
+        }
+
+        @media screen and (min-width: $tabletBreak) {
+            width: 40%;
+            margin: 12px 0 0 5%;
         }
     }
 }

@@ -6,12 +6,20 @@ import { ArtContext } from "../providers/ArtProvider"
 import { Element } from 'react-scroll'
 
 import ARphone from '../svg/ar-phone'
+import Cubes from '../../public/images/cubes.png'
 
 const About = () => {
     const [art, setArt] = useContext(ArtContext)
     
     return (
-        <Element name="about" className="about-container">
+        <Element 
+            name="about" 
+            className="about-container"
+            style={{
+                backgroundImage: `url(${Cubes})`,
+                backgroundRepeat: 'repeat'
+            }}
+        >
             <div className="about-top" />
             <div className="about-elements">
                 <h1>Collaborate. Create. Transform.</h1>
