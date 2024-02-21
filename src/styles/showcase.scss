@@ -1,10 +1,133 @@
 .showcase-container {
     width: 100%;
-    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: $brand;
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+        color: $light;
+        font-size: 44px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 50px 0 0 10px;
+        padding: 0;
+
+        @media screen and (min-width: $tabletBreak) {
+            margin: 20px 0 20px 100px;
+        }
+    }
+}
+
+.videos-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: $brand;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-control {
+    width: 36px;
+    height: 36px;
+    background: $formback;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 401;
+    opacity: .4;
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+        opacity: .65;
+        transition: opacity .3s ease-in-out; 
+    }
+
+    svg {
+        stroke: $compliment;
+        width: 31px;
+        height: 31px;
+    } 
+}
+
+.video-left {
+    position: absolute;
+    left: 20px;
+    bottom: 1%;
+
+    @media screen and (min-width: $artismBreak) {
+        bottom: 7%;
+    }
+
+    @media screen and (min-width: $tabletBreak) {
+        bottom: 45%;
+    }
+}
+
+.video-right {
+    position: absolute;
+    right: 20px;
+    bottom: 1%;
+    transform: rotate(180deg);
+
+    @media screen and (min-width: $artismBreak) {
+        bottom: 7%;
+    }
+
+    @media screen and (min-width: $tabletBreak) {
+        bottom: 45%;
+    }
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 0 0 1%;
+
+    @media screen and (min-width: $tabletBreak) {
+        width: 80%;
+        margin: 0 0 0 7%;
+    }
+
+    h2 {
+        background: $compliment;
+        color: $brand;
+    }
+
+    video {
+        padding: 2%;
+        border-radius: 2%;
+        background: $formback;
+        width: 100%;
+        height: auto;
+    }
+
+    p {
+        color: $compliment;
+        margin: 20px 10% 40px;
+        width: 80%;
+        line-height: 21px;
+        font-size: 14px;
+
+        @media screen and (min-width: $tabletBreak) {
+            margin: 20px 50% 20px 5%;
+            width: 45%;
+        }
+    }
 }

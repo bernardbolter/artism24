@@ -6,8 +6,7 @@ import { Element } from 'react-scroll'
 
 import Footer from "./Footer"
 
-// import { useForm } from "react-hook-form"
-// import { yupResolver } from "@hookform/resolvers/yup"
+import axios from 'axios'
 import { Formik, Form, Field } from 'formik'
 import * as yup from "yup"
 
@@ -24,15 +23,16 @@ const artismSchema = yup.object().shape({
 const Contact = () => {
     const [art, setArt] = useContext(ArtContext)
     const [submitting, setSubmitting] = useState(false)
+    const [errorMsg, setErrorMsg] = useState('')
+    const [successMsg, setSuccessMsg] = useState('')
 
     
     return (
         <Element name="contact" className="contact-container">
             <div className="contact-text">
                 <h2>Get in Touch.</h2>
-                <h4>If you have any questions or would like more information about getting an AR project for your Artwork</h4>
+                <h4>If you have any questions or would like more information about getting an AR enhancment for your Artwork or Creation done,</h4>
                 <h5>Just send over a message at info@artism.org, or use the contact for here.</h5>
-                <p>this project is in the begining stages and we are looking to work with some artists for free, to work some things out and get some examples out there, let us know if youre interested</p>
             </div>
             <div className="contact-line" />
             <div className="contact-form">
@@ -43,14 +43,29 @@ const Contact = () => {
                         message: ''
                     }}
                     validationSchema={artismSchema}
-                    onSubmit={values => {
-                        console.log('hit submit')
-                        console.log(values)
+                    onSubmit={(values, { resetForm }) => {
+                        setSubmitting(true)
+                        resetForm()
+                        setSuccessMsg('')
+                        setErrorMsg('')
+                        axios.defaults.headers.post['Content-Type'] = 'application/json'
+                        axios.post('https://formsubmit.co/ajax/info@artism.org', values)
+                            .then(response => {
+                                console.log(response)
+                                setSuccessMsg('we have recieved your email and will get back to you shortly.')
+                                setSubmitting(false)
+                            })
+                            .catch(error => {
+                                console.log(error)
+                                setErrorMsg('There was a problem sending the message, try again later or email directly')
+                                setSubmitting(false)
+                            })
                     }}
                 >
-                    {({ errors, touched }) => {
-                        // console.log(errors)
-                        // console.log(touched)
+                    {({ errors, touched, dirty }) => {
+                        // console.log('errors: ', errors)
+                        // console.log('touched: ', touched)
+                        // console.log('dirty' , dirty)
 
                         return (
                             <Form>
@@ -63,7 +78,6 @@ const Contact = () => {
                                             borderBottomColor: errors.name ? vars.error : vars.brand 
                                         }}
                                     />
-                                    {/* {errors.name || touched.errors ? <p className="contact-error">{errors.name}</p> : null} */}
                                 </div>
                                 <div className="contact-input">
                                     <label className="form-label" htmlFor="email">email</label>
@@ -74,7 +88,6 @@ const Contact = () => {
                                             borderBottomColor: errors.email ? vars.error : vars.brand
                                         }}
                                     />
-                                    {/* {errors.email || touched.email ? <p className="contact-error">{errors.email}</p> : null} */}
                                 </div>
             
                                 <div className="contact-input">
@@ -88,10 +101,9 @@ const Contact = () => {
                                         }}    
                                     />
                                 </div>
-                                <button className="contact-submit" type="submit">submit</button>
-                                <div className={submitting ? 'spinner spinner-show' : 'spinner'}>
-                                    <Spinner />
-                                </div>
+                                <button className="contact-submit" type="submit">{submitting ? <Spinner /> : 'submit'}</button>
+                                {!dirty && errorMsg.length > 0 && <p className="contact-error">{errorMsg}</p>}
+                                {!dirty && successMsg.length > 0 && <p className="contact-success">{successMsg}</p>}
                             </Form>
                     )}}
                 </Formik>

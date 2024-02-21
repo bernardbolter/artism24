@@ -15,18 +15,18 @@ const Links = () => {
         <div className="links-container">
             <a href="https://www.instagram.com/art____ism">
                 <Instagram 
-                    fill={art.showPhone ? vars.compliment :vars.brand }
+                    fill={art.brandColor ? vars.brand : vars.compliment }
                 />
             </a>
             <a href="https://twitter.com/art____ism">
                 <Twitter
                     style={{ paddingLeft: '3px' }}
-                    fill={art.showPhone ? vars.compliment :vars.brand }
+                    fill={art.brandColor ? vars.brand : vars.compliment }
                 />
             </a>
             <a href="https://www.linkedin.com/in/bernardbolter">
                 <Linkedin 
-                    fill={art.showPhone ? vars.compliment :vars.brand }
+                    fill={art.brandColor ? vars.brand : vars.compliment }
                 />
             </a>
         </div>

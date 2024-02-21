@@ -1,0 +1,16 @@
+[
+    {
+        "title" : "megacities video",
+        "video" : "/megacities_ar_example.mp4",
+        "height" : 480,
+        "width" : 848,
+        "text" : "Developed this AR to help viewers explore artwork from the megacities.world series. These artworks are a collage of multiple satellite images from one country. The AR app lets viewers explore and see the different cities that make up the composition, and also includes a video for each place for viewers to get a vibe from each place."
+    },
+    {
+        "title" : "megacities video",
+        "video" : "/megacities_ar_example.mp4",
+        "height" : 480,
+        "width" : 848,
+        "text" : "Developed this AR to help viewers explore artwork from the megacities.world series. These artworks are a collage of multiple satellite images from one country. The AR app lets viewers explore and see the different cities that make up the composition, and also includes a video for each place for viewers to get a vibe from each place."
+    }
+]

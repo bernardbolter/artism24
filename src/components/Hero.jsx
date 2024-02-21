@@ -3,19 +3,17 @@
 import { useEffect, useContext, useState } from "react"
 import { ArtContext } from "../providers/ArtProvider"
 import { useWindowSize } from '../helpers/useWindowSize'
+import { animateScroll } from 'react-scroll'
+
 import vars from '../styles/vars.module.scss'
-import texts from '../styles/text.json'
-import backgrounds from '../styles/background.json'
+import { texts, backgrounds } from '../styles/arStyles'
 
 const Hero = () => {
     const [art, setArt] = useContext(ArtContext)
     const [text, setText] = useState(texts[Math.floor(Math.random()*texts.length)])
     const [background, setBackground] = useState(backgrounds[Math.floor(Math.random()*backgrounds.length)])
+
     const size = useWindowSize()
-
-    useEffect(() => {
-
-    }, [])
     
     useEffect(() => {
         window.addEventListener('pointermove', handleCursorMove)
@@ -71,7 +69,7 @@ const Hero = () => {
                         top: -5,
                         left: 0
                     }}
-                    onClick={() => art.showPhone ? setArt(state => ({ ...state, showPhone: false })) : null}   
+                    // onClick={() => art.showPhone ? setArt(state => ({ ...state, showPhone: false })) : null}   
                 />
                 </div>
                 <div 
@@ -149,7 +147,7 @@ const Hero = () => {
      
           <div 
               className="plain name"
-              style={{ opacity: art.showPhone ? .5 : 1 }}
+              style={{ opacity: art.showPhone ? 1 : 1 }}
           >
             <h1>
                 <span className='art'>ART</span>
@@ -162,7 +160,22 @@ const Hero = () => {
           <div className="showPhoneButton" >
               <h4
                 style={{ color: art.showPhone ? vars.compliment : vars.brand }}
-                onClick={() => setArt(state => ({ ...state, showPhone: !state.showPhone }))}
+                onClick={() => {
+                    if (art.showPhone) {
+                        animateScroll.scrollTo(size.height)
+                        setArt(state => ({
+                            ...state,
+                            showPhone: false,
+                            brandColor: true
+                        }))
+                    } else {
+                        setArt(state => ({ 
+                            ...state, 
+                            showPhone: true,
+                            brandColor: false
+                        }))
+                    }
+                }}
               >{art.showPhone ? 'learn more' : 'show more'}</h4>
           </div>
       </section>

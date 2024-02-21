@@ -2,6 +2,9 @@
 
 import React, { useState, createContext } from 'react'
 
+import videos from '../data/videos.json'
+import faq from '../data/faq.json'
+
 export const ArtContext = createContext()
 
 const ArtProvider = ({ children }) => {
@@ -15,7 +18,12 @@ const ArtProvider = ({ children }) => {
         navOpen: false,
         datenschutzOpen: false,
         impressumOpen: false,
-        datenDisplay: 'none'
+        datenDisplay: 'none',
+        brandColor: true, 
+
+        faq: faq,
+        videos: videos,
+        videoIndex: 0
     })
     
     return (

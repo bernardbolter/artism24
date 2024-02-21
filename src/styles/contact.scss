@@ -35,14 +35,14 @@
         color: $light;
         font-weight: 600;
         font-size: 15px;
-        margin: 0;
+        margin: 0 15% 0 0;
     }
 
     h5 {
         color: $light;
         font-weight: 400;
         font-size: 14px;
-        margin: 10px 0;
+        margin: 10px 15% 10px 0;
     }
 
     p {
@@ -125,10 +125,18 @@
     border-radius: 2px;
     font-weight: 700;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
     &:hover {
         opacity: .9;
         transition: opacity .5 ease; 
+    }
+
+    svg {
+        fill: $light;
     }
 }
 
@@ -140,8 +148,16 @@
     opacity: .6;
 }
 
+.contact-success {
+    color: $success;
+    font-size: 12px;
+    margin: 5px 0;
+    padding: 0;
+    opacity: .6;
+}
+
 .spinner {
-    fill: $brand;
+    fill: $light;
 }
 
 @keyframes spinner_ani {

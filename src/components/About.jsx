@@ -5,13 +5,27 @@ import { ArtContext } from "../providers/ArtProvider"
 
 import { Element } from 'react-scroll'
 
+import ARphone from '../svg/ar-phone'
+
 const About = () => {
     const [art, setArt] = useContext(ArtContext)
     
     return (
         <Element name="about" className="about-container">
             <div className="about-top" />
-            <h1>About</h1>
+            <div className="about-elements">
+                <h1>Collaborate. Create. Transform.</h1>
+                <h2>ARTISM collaborates with artists and designers to seamlessly integrate web-based AR enhancements onto their creations.</h2>
+                <h3>Together, we explore meaningful enhancements that go beyond surface-level animations, unlocking the true potential of AR.</h3>
+                <h4>Browser based,</h4>
+                <h4>no App required.</h4>
+                <h5>just imagination and collaboration</h5>
+                <p>Browse examples, read FAQs, and reach out via the contact form below.</p>
+                <p>Let's collaborate and pioneer together in this brave new world of augmented reality.</p>
+                <div className="about-phone">
+                    <ARphone />
+                </div>
+            </div>
             <div className="about-bot-1" />
             <div className="about-bot-2" />
             <div className="about-bot-3" />

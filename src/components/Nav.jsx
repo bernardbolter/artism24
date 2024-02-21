@@ -3,7 +3,7 @@
 import { useContext, useState, useEffect } from "react"
 import { ArtContext } from "../providers/ArtProvider"
 
-import { animateScroll, Link } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 import { useAnimate, stagger, motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { useWindowSize } from "../helpers/useWindowSize"
@@ -27,6 +27,11 @@ const Nav = () => {
         } else {
             setNavPosition({ top: 'auto', bottom: 20, position: 'absolute'})
             setLinksPosition({ top: 'auto', bottom: 49, position: 'absolute'})
+        }
+        if (latest > (size.height * 2) - 100 && latest < (size.height * 3) - 100) {
+            setArt(state => ({ ...state, brandColor: false }))
+        } else {
+            setArt(state => ({ ...state, brandColor: true }))
         }
     })
 
@@ -62,15 +67,15 @@ const Nav = () => {
                 <div className={art.navOpen ? 'nav-spans nav-spans-open' : 'nav-spans'}>
                     <span 
                         className="span-top"
-                        style={{background: art.showPhone ? vars.compliment : vars.brand}}
+                        style={{background: art.brandColor ? vars.brand : vars.compliment}}
                     />
                     <span 
                         className="span-middle"
-                        style={{background: art.showPhone ? vars.compliment : vars.brand}}
+                        style={{background: art.brandColor ? vars.brand : vars.compliment}}
                     />
                     <span 
                         className="span-bottom"
-                        style={{background: art.showPhone ? vars.compliment : vars.brand}}
+                        style={{background: art.brandColor ? vars.brand : vars.compliment}}
                     />
                 </div>
             </div>
@@ -79,7 +84,7 @@ const Nav = () => {
                 style={linksPosition}    
             >
                 <li
-                    style={{color: art.showPhone ? vars.compliment : vars.brand}}
+                    style={{color: art.brandColor ? vars.brand : vars.compliment}}
                     onClick={() => {
 
                     }}
@@ -89,21 +94,21 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li
-                    style={{color: art.showPhone ? vars.compliment : vars.brand}}
+                    style={{color: art.brandColor ? vars.brand : vars.compliment}}
                 >
                     <Link to="showcase" spy={true} smooth={true} duration={500}>
                         showcase
                     </Link>
                 </li>
                 <li
-                    style={{color: art.showPhone ? vars.compliment : vars.brand}}               
+                    style={{color: art.brandColor ? vars.brand : vars.compliment}}               
                 >
                     <Link to="faq" spy={true} smooth={true} duration={500}>
                         FAQ
                     </Link>        
                 </li>
                 <li
-                    style={{color: art.showPhone ? vars.compliment : vars.brand}}               
+                    style={{color: art.brandColor ? vars.brand : vars.compliment}}               
                 >
                     <Link to="contact" spy={true} smooth={true} duration={500}>
                         contact
