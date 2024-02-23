@@ -30,7 +30,7 @@ const Impressum = () => {
                 <h5>10997 Berlin</h5>
                 <h4>email: bernardbolter@gmail.com</h4>
                 <h5>DE: +49 (0)151 4749 1553</h5>
-                <h5>US: +1 415 490 7702 <span>what's app, telegram, and signal</span></h5>
+                <h5>US: +1 415 490 7702 <span>what&#39;s app, telegram, and signal</span></h5>
                 <h4>Steuer Nr. 15/235/05740</h4>
             </div>
         </motion.section>

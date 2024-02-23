@@ -30,7 +30,7 @@ const Datenschutz = () => {
                 setArt(state => ({ ...state, datenDisplay: 'none' }))
             }, 500)
         }
-    }, [art.datenschutzOpen])
+    }, [art.datenschutzOpen, setArt, size.height])
 
     return (
         <motion.section 

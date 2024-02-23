@@ -51,7 +51,7 @@ const Nav = () => {
               delay: art.navOpen ? staggerMenuItems : 0,
             }
           );
-    }, [art.navOpen])
+    }, [art.navOpen, animate])
 
     return (
         <motion.nav 

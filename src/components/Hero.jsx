@@ -38,7 +38,7 @@ const Hero = () => {
                 phoneBotPad: 34
             }))
         }
-    }, [size])
+    }, [size, setArt])
 
     const handleCursorMove = pos => {
         let x = pos.client / window.innerWidth * 100

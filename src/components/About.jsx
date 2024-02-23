@@ -29,7 +29,7 @@ const About = () => {
                 <h4>no App required.</h4>
                 <h5>just imagination and collaboration</h5>
                 <p>Browse examples, read FAQs, and reach out via the contact form below.</p>
-                <p>Let's collaborate and pioneer together in this brave new world of augmented reality.</p>
+                <p>Let&#39;s collaborate and pioneer together in this brave new world of augmented reality.</p>
                 <div className="about-phone">
                     <ARphone />
                 </div>
